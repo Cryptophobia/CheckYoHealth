@@ -1,0 +1,41 @@
+extends ./layout.jade
+
+form(method="post", action="/", enctype="application/x-www-form-urlencoded")
+block content
+	div.statusbar
+		- if(statusCode == '418')
+			#Fail
+				h3 Status: #{statusCode}
+		- else
+			#Success
+				h3 Status: #{statusCode}
+	#Checks.row
+		label(for="Databases") Database Checks:
+		for database in data.databases
+			li.checktitle.row= JSON.stringify(database.name).replace(/\"/g, "")
+				- if(database.status == 'closed')
+					#Fail
+						#Status #{database.status}
+				- else
+					#Success
+						#Status #{database.status}
+	#Checks.row
+		label(for="Files") File Checks:
+		for file in data.files
+			li.checktitle.row= JSON.stringify(file.name).replace(/\"/g, "")
+				- if(file.status == 'notexists')
+					#Fail
+						#Status #{file.status}
+				- else
+					#Success
+						#Status #{file.status}
+	#Checks.row
+		label(for="Commands") Command Checks:
+		for command in data.command
+			li.checktitle.row= JSON.stringify(command.name).replace(/\"/g, "")
+				- if(command.status == 'false')
+					#Fail
+						#Status #{command.status}
+				- else
+					#Success
+						#Status #{command.status}

@@ -1,0 +1,172 @@
+html, body { margin: 0; padding: 1.6em; margin-left: 2em; }
+
+body, input { font-family: helvetica, arial, freesans, clean, sans-serif; }
+h1 {  }
+
+footer {
+	clear: both;
+	font-size: smaller;
+	font-style: italic;
+}
+
+form { clear: both; }
+
+fieldset { padding: 2em; width: 26em; }
+
+fieldset div {
+	clear: both;
+	margin-bottom: 0.5em;
+}
+
+label { 
+	/*display: block;*/
+	font-weight: bold;
+	font-size: 1.2em;
+	float: left;
+	line-height: 2.5em;
+	width: 12em;
+}
+
+input { 
+	padding: 0.5em;
+}
+
+input[type=text] {
+	display: block;
+	font-size: 1em;
+	width: 16em;
+}
+
+input[type=button],
+input[type=submit] {
+	clear: both;
+	background: #EEE;
+	border-radius: .5em;
+	-moz-border-radius: .5em;
+	font-size: 1em;
+	margin-left: 8em;
+}
+
+input[type=button] { float: left; }
+
+.title {
+	color: green;
+	opacity: 0.7em;
+}
+
+.logo {
+  display: block;
+  max-width:135px;
+  max-height:65px;
+  width: auto;
+  height: auto;
+}
+
+#Logo {
+	height: auto; 
+	width: auto; 
+}
+
+#Status { 
+	clear: right;
+	float: center;
+	padding: 1em 2em;
+	margin-top: 2em; 
+	margin-right: 5em;
+	border-radius: 2em;
+	-moz-border-radius: 2em;
+	border:0.1em solid black;
+}
+#ShowTestCommit { clear: none; margin-left: 1em; }
+
+#Success {
+	color: green;
+	opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+#Fail {
+	color: red;
+	opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+#LastUpdated {
+	float: left;
+	font-style: italic;
+	font-size: 0.2em;
+	margin: 0 1.5em 1.5em 1.5em;
+}
+
+#Commits {
+	background: #DDD;
+	padding: 1em 2em;
+}
+
+#Commits .Unread {
+	background: hsl(60, 85%, 50%);
+}
+
+#Commits .Unread .Author {
+	background: hsl(60, 65%, 50%);
+}
+
+#RepositoryLink {
+	clear: both;
+	display: block;
+}
+
+li {
+	float: left;
+	border-bottom: 1px black;
+	clear: both;
+	list-style: none;
+	padding: 1em 0;
+	margin-left: 2em;
+	width: 60%;
+	height: 23%;
+}
+
+li:hover {
+	background: #EEE;
+}
+
+section {
+	border: #DDD solid thin;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+ul,
+ul li,
+.Author,
+.Author img,
+.Committer {
+	float: left;
+}
+
+.Author img.Profile { margin: 0 1em 1em 0; }
+
+.Author,
+.Commit {
+	font-size: .75em;
+}
+
+.Author {
+	background-color: #CCC;
+	margin-right: 1em;
+	padding: 1em;
+	width: 200px;
+}
+
+.CommitterProfile {
+	position: relative;
+	left: -2.5em;
+	top: 2.5em;
+	display: inline;
+	margin-right: -2.5em;
+}
+
+.Commit { float:right; margin: 0 1em 1em; }
+
+.Message { width: 50em; }

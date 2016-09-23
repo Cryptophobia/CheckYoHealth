@@ -1,0 +1,31 @@
+---
+databases:
+ - name: optimus
+   host: 127.0.0.1
+   port: 1433
+ - name: prime
+   host: 127.0.0.2
+   port: 3306
+
+files:
+ - name: config file
+   path: /tmp/hackday/checks.yml
+ - name: main application file
+   path: /tmp/hackday/test.js 
+
+urls:
+ - name: main application url
+   url: 'https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://www.digg.com/rss/index.xml'
+   searchstring: "Digg Top Stories"
+ - name: secondary url healthcheck
+   url: http://www.careerbuilder.com
+   searchstring: thisotherstring
+
+commands:
+ - name: checking python version
+   command: python -V 2>&1
+   searchstring: Python 2.7.6
+ - name: checking nodejs version
+   command: node --version
+   searchstring: v4.4.0     
+   
